@@ -1,7 +1,9 @@
 'use server';
 
+
 import connectDB from "@/lib/mongodb";
 import Event from '@/database/event.model';
+import { cacheLife } from "next/cache";
 
 export const getSimilarEventsBySlug = async (slug: string) => {
   try {
